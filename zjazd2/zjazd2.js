@@ -67,7 +67,7 @@
   
 //   console.log(newArray);
 // }
-// subIndex(array);
+// subIndex();
 
 // zad 6 
 
@@ -100,24 +100,22 @@
 
 // zad 8
 
-// let array = [1,6,23,8,4,8,3,7];
+let array = [1,6,23,8,4,8,3,7];
 
-// function randomInt(array,n) {
-//     newArray = new Array();
-//     let random = 0;
-//     let min = 0;
+function randomInt(array,n) {
+    newArray = [];
 
-//   for(let i = 0; i < n; i++){
-//     random = array[Math.floor(Math.random() * array.length)];
-//     newArray.push(random);
-//   }
+  for(let i = 0; i < n; i++){
+    random = array[Math.floor(Math.random() * array.length)];
+    newArray.push(random);
+  }
 
-//   min = Math.min(...newArray)
+  min = Math.min(...newArray)
   
-//   console.log("newArray: ",newArray)
-//   console.log("min: ",min)
-// }
-// randomInt(array,12)
+  console.log("newArray: ",newArray)
+  console.log("min: ",min)
+}
+randomInt(array,2)
 
 // zad 9
 
