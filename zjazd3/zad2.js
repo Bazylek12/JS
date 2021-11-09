@@ -12,9 +12,9 @@ let calculator = (function (x, y) {
             y: y,
         },
         operation: null,
-     //   set: setOperation,
-      //  math: math,
-    }
+        set: setOperation,
+        math: math,
+    };
     function setOperation (oper) {
         this.operation = oper;
     }
