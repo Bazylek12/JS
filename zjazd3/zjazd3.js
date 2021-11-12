@@ -1,32 +1,40 @@
-let operations = {
-  sum: (x, y) => x + y,
-  sub: (x, y) => x - y,
-  mul: (x, y) => x * y,
-  div: (x, y) => x / y,
-  // mod: (x, y) => x % y,
-  // pow: (x, y) => Math.pow(x, y),
-};
+let iffeFunction = (function(){
+    let privVar = 0;
 
-let calculation = (function (x, y) {
-  let innerObject = {
-    param: {
-      x: x,
-      y: y,
-    },
-    mathOperation: null,
-    setOperation: setOperation,
-    calculate: calculate,
-  };
+    function showValue(){
+        if(privVar == null || privVar == undefined){
+            return `Zmienna prywatna jest null lub undefined w tym przypadku: ${privVar}`
+        }else{
+            return `Wartość zmiennej: ${privVar}`
+        }
+    }
 
-  function setOperation(mathOperation) {
-    this.mathOperation = mathOperation;
-  }
+    function setValue(newValue){
+        if(newValue){
+            privVar = newValue
+        }
+    }
 
-  function calculate() {
-    return this.mathOperation(this.param.x, this.param.y);
-  }
-  return innerObject;
-})(12, 3);
+    function reverseValue(){
+        if(Number.isInteger(privVar) == true){
+            return "Zmiana wartości: " + (privVar * (-1))
+        }else if(typeof privVar == "string"){
+            return `Odwrócona wartość: ${privVar.split('').reverse().join('')}`
+        }else{
+            return "Zmienna jest null lub undefined"
+        }
+    }
 
-calculation.setOperation(operations.sum);
-console.log(calculation.calculate());
+    return{
+        showValue,
+        setValue,
+        reverseValue
+    }
+
+})()
+
+console.log(iffeFunction.showValue())
+console.log(iffeFunction.reverseValue())
+iffeFunction.setValue(undefined)
+console.log(iffeFunction.showValue())
+console.log(iffeFunction.reverseValue())

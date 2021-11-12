@@ -25,5 +25,5 @@ let calculator = (function (x, y) {
     return parameters;
 })(2, 2);
 
-calculator.set(operations.div);
+calculator.set(operations.mul);
 console.log(calculator.math());

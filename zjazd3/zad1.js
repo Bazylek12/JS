@@ -23,6 +23,6 @@
       };
   })();
 
-  iife.setValue(123);
+  iife.setValue('123');
   console.log(iife.showValue());
   console.log(iife.reverseValue());
