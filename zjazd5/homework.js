@@ -2,6 +2,7 @@ let soldiers = [];
 for (let i = 1; i <= 7; i++) {
     soldiers.push(i);
 }
+
 let alive;
 let dead;
 
