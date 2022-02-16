@@ -36,7 +36,6 @@ let newFive = [];
       newFive.push(fiveRandomCards[i].split(" ").join(""))
 }
 
-console.log(newFive);
 let rank = [];
 let suit = [];
 
@@ -45,20 +44,17 @@ for (let i = 0; i < 5; i++) {
     suit.push(newFive[i].charAt(1));
 }
 let sortedRanks = rank.sort()
-console.log(suit)
 
 // Counting the same ranks and values
 const countRanks = {};
 rank.forEach((x) => {
     countRanks[x] = (countRanks[x] || 0) + 1;
 });
-console.log(countRanks)
 
 const countSuits = {};
 suit.forEach((x) => {
     countSuits[x] = (countSuits[x] || 0) + 1;
 });
-console.log(countSuits)
 
 // Function to check poker sets
 let isPair = () => {
